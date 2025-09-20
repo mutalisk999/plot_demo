@@ -34,7 +34,7 @@ class WeatherApi(object):
     @staticmethod
     def parse_forecast_list(resp_dict: Dict) -> Tuple[List, List, List]:
         forecast_list = resp_dict.get("data").get("forecast")
-        date_list = list(map(lambda x: x.get("ymd"), forecast_list))
+        date_list = list(map(lambda x: x.get("ymd").split("-", 1)[1].replace("-", "/"), forecast_list))
         high_list = list(map(lambda x: int(x.get("high").split()[1].rstrip("℃")), forecast_list))
         low_list = list(map(lambda x: int(x.get("low").split()[1].rstrip("℃")), forecast_list))
         return date_list, high_list, low_list
