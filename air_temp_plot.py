@@ -13,6 +13,7 @@ def plot(date_list: List, high_list: List, low_list: List):
     ax.set_xlabel('date')
     ax.set_ylabel('high/low temp ℃')
     ax.grid(True)
+    # fig.savefig("assets/air_temp_plot.png", dpi=300)
     plt.show()
 
 
