@@ -2,6 +2,33 @@
 
 本项目采用 `conda` 作为包管理工具
 
+
+### 配置 conda 国内源
+
+```shell script
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+conda config --set show_channel_urls yes
+```
+
+### 切换 python 版本
+
+wrf-python不支持3.11以上版本的python，因此不要使用太高版本的python 
+
+```shell script
+conda install -c conda-forge python=3.11
+```
+
+### 安装依赖的第三方包
+
+```shell script
+conda install -c conda-forge netCDF4 
+conda install -c conda-forge cartopy
+conda install -c conda-forge wrf-python
+conda install -c conda-forge cmaps
+```
+
+
 ### conda 运行本项目
 
   * Air Temperature Chart
@@ -14,3 +41,10 @@
       ```
 
       ![Air Temperature Chart](/assets/air_temp_plot.png)
+    
+  * Vertical Chart
+
+      ```shell script
+      conda run vertical_plot.py
+      ```
+        
