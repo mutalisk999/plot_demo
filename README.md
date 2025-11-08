@@ -42,9 +42,13 @@ conda install -c conda-forge cmaps
 
       ![Air Temperature Chart](/assets/air_temp_plot.png)
     
-  * Vertical Chart
+    
+  * Vertical Section Chart
+     
+    - 代码参考自 https://zhuanlan.zhihu.com/p/380626604
 
       ```shell script
       conda run vertical_plot.py
       ```
-        
+    
+      ![Vertical Section Chart](/assets/vertical_plot.png)
